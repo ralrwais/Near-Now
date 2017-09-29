@@ -1,5 +1,6 @@
 .main {
 	background: #607d8b;
+
 }
 .title {
 	font-size: 40px;
@@ -20,10 +21,13 @@
 }
 .mapResult {
 	width: 100%;
+	position: relative;
+	overflow: auto scroll;
 }
 #map {
-	position: relative;
-	overflow: auto visible;
+	
+	overflow: auto visible scroll;
+	overflow-y: scroll;
 	height: 100%;
 	width: 50%;
 	float: left;
@@ -33,28 +37,28 @@
 
 }
 #results {
-	
+	margin-top: 20px;
 	width: 50%;
 	font-size: 16px;
 	color: grey;
 	background-color: white;
 	float: left;
-	text-align: center;
-	/*font-family: 'Poiret One', cursive;*/
-	padding-top: 15px;
-	
+	text-align: center;	
 }
 #media {
 	padding-top: 30px;
 	padding-bottom: 10px;
-	margin-left: 5%;
 	float: left;
-	
 }
 .card {
 	height: 430px;
 	width: 40px;
 	float: left;
+	margin-left: 5px;
+	margin-bottom: 2%;
+	box-shadow: 2px 5px 5px grey;
+	border:none;
+
 }
 .img {
 	height: 200px;

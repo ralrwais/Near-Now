@@ -74,25 +74,37 @@ function callback(results, status) {
                     </div>`
 
              var myCard = $('#media').append(template);
-
- 		 }
-		}
-	  }
-  	}
-	}
+            }
+		      }
+	     }
+  	} 
+	} 
+  $('#media').empty();
 }
 
 	 function createMarker(place) {
         var placeLoc = place.geometry.location;
         var marker = new google.maps.Marker({
           map: map,
-          position: place.geometry.location
+          position: place.geometry.location,
+          animation: google.maps.Animation.DROP
         });
+
+        marker.addListener('click', toggleBounce);
 
         google.maps.event.addListener(marker, 'click', function() {
           infowindow.setContent(place.name);
           infowindow.open(map, this);
         });
+
+      function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
       }
+    }
+
 
 
